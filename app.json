@@ -7,7 +7,26 @@
     "plugins": [
       "expo-router"
     ],
-    "name": "cardapp",
-    "slug": "cardapp"
+    "name": "Alex's wacky and silly drinking game",
+    "slug": "get_drunk",
+    "privacy": "public",
+    "platforms": [
+      "android",
+      "web"
+    ],
+    "android": {
+      "package": "com.alex.drinking",
+      "versionCode": 1
+    },
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "3001223e-bf6a-4131-a3b5-8b61368720ca"
+      }
+    }
   }
 }
