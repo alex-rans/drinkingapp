@@ -9,7 +9,7 @@ import { NormalDeck } from "../../assets/decks/normalDeck";
 import { TestDeck } from "../../assets/decks/testDeck";
 
 const Game = () => {
-
+    let gameDeck = []
     const [isLoading, setIsLoading] = useState(true);
     const [deck, setDeck] = useState();
     const [players, setPlayers] = useState();
@@ -24,29 +24,49 @@ const Game = () => {
         });
         let jsonvalue = AsyncStorage.getItem('players').then((value) => {
             setPlayers(JSON.parse(value))
-            setIsLoading(false)
+            setIsLoading(false)            
         });
-        
+
+        // switch (deck) {
+        //     case 'Normal':
+        //         Deck = NormalDeck(players)['cards']
+        //         Pick50Cards(Deck);
+        //         break;
+        //     case 'Lewd':
+        //         Deck = LewdDeck(players)['cards']
+        //         Pick50Cards(Deck);
+        //         break;
+        //     case 'Test':
+        //         gameDeck = TestDeck(players)['cards']
+        //         // Pick50Cards(Deck);
+        //         break;
+        // }
+        // setIsLoading(false)
     }, [])
+
+    function Pick50Cards(deck) {
+        console.log(Deck.length)
+        for (let count = 0; count < 50; count++) {
+            const randomCard = deck[Math.floor(Math.random() * deck.length)]
+            gameDeck.push(randomCard)
+            deck.splice(Deck.indexOf(randomCard), 1);
+        }
+    }
+
     switch (deck) {
         case 'Normal':
             Deck = NormalDeck(players)['cards']
+            Pick50Cards(Deck);
             break;
         case 'Lewd':
             Deck = LewdDeck(players)['cards']
+            Pick50Cards(Deck);
             break;
         case 'Test':
-            Deck = TestDeck(players)['cards']
+            gameDeck = TestDeck(players)['cards']
+            // Pick50Cards(Deck);
             break;
     }
-
-    // async function getFuckingDeck() {
-    //     Deck = await NormalDeck(players)['cards']
-    //     console.log(Deck)
-    //     setIsLoading(false)
-    // }
-
-    // getFuckingDeck()
 
     if (isLoading) {
         return <View><Text>Loading...</Text></View>;
@@ -55,7 +75,7 @@ const Game = () => {
     return (
         <SafeAreaView style={styles.container}>
             <Stack.Screen options={{ headerShown: false, orientation: 'landscape' }} />
-            <Card selecteddeck={Deck}></Card>
+            <Card selecteddeck={gameDeck}></Card>
         </SafeAreaView>
     )
 }

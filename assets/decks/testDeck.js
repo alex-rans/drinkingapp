@@ -1,32 +1,7 @@
+import {GetRandonInt, GetRandomDirection, GetRandomName, GetTypes} from '../deckFunctions'
+
 export function TestDeck(names) {
-    let lastname = ''
-    function GetRandonInt(min, max) {
-        const number = Math.floor(Math.random() * (max - min + 1) + min);
-        return number;
-    }
-
-    function GetRandomDirection() {
-        const randomBoolean = () => Math.random() >= 0.5;
-        if (randomBoolean()) {
-            return 'left'
-        }
-        else return 'right'
-    }
-
-    function GetRandomName() {
-        const randomname = names[Math.floor(Math.random() * names.length)];
-        if (randomname !== lastname) {
-            lastname = randomname
-            return randomname
-        }
-        GetRandomName()
-    }
-
-    const types = {
-        DARE: 'Dare',
-        GAME: 'Game',
-        NORMAL: 'Normal'
-    }
+    const types = GetTypes();
 
     // names = JSON.parse(names)
 
@@ -35,8 +10,8 @@ export function TestDeck(names) {
         cards: [
             {
                 type: types.GAME,
-                challenge: `TEST`
-            },           
+                challenge: `${GetRandomName(names)[0]} has to give one player a shot and the rest of the players a little kiss.`,
+            },
         ]
     }
 

@@ -57,7 +57,6 @@ const Playerselect = () => {
             style={styles.input}
             value={playerinput}
             onChangeText={setPlayInput}
-            defaultValue={playerinput}
             onSubmitEditing={() => submitName()}
           />
           {link}

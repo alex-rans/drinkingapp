@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import Namecard from "../components/common/namecard/Namecard";
 
 const styles = StyleSheet.create({
   container: {

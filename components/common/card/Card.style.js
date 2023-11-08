@@ -1,4 +1,7 @@
 import { StyleSheet } from "react-native";
+import { useFonts } from 'expo-font';
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -11,7 +14,7 @@ const styles = StyleSheet.create({
     height: '100%',
     alignItems: `center`,
     justifyContent: `space-around`,
-    backgroundColor: 'blue'
+    backgroundColor: '#454f5c'
   },
   cardDare: {
     display: `flex`,
@@ -19,7 +22,7 @@ const styles = StyleSheet.create({
     height: '100%',
     alignItems: `center`,
     justifyContent: `center`,
-    backgroundColor: 'red'
+    backgroundColor: '#91143c'
   },
   cardGame: {
     display: `flex`,
@@ -27,14 +30,14 @@ const styles = StyleSheet.create({
     height: '100%',
     alignItems: `center`,
     justifyContent: `center`,
-    backgroundColor: 'green'
+    backgroundColor: '#008000'
   },
   cardText: {
     color: 'white',
     alignItems: `center`,
-    marginVertical: `25px`,
+    marginVertical: `15px`,
     marginHorizontal: `30px`,
-    fontSize: 24,
+    fontSize: 28,
     textAlign: `center`,
   },
   cardDivider: {
@@ -45,10 +48,8 @@ const styles = StyleSheet.create({
   },
   cardTitle: {
     fontFamily: 'Carter One, sans-serif',
-    fontSize: 36,
+    fontSize: 58,
     color: 'white',
-    // fontWeight: 'bold',
-    marginBottom: 15
   }
 });
 

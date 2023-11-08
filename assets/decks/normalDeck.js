@@ -80,7 +80,7 @@ export function NormalDeck(names) {
             },
             {
                 type: types.NORMAL,
-                challenge: `${GetRandomName()[0]}, give out one sip for every girl in the group`
+                challenge: `${GetRandomName()[0]}, drink one sip for every girl in the group`
             },
             {
                 type: types.NORMAL,
@@ -118,7 +118,6 @@ export function NormalDeck(names) {
 
         ]
     }
-
     return deck;
 }
 

@@ -1,6 +1,6 @@
 import { React, useState } from 'react'
 import { View, Text, Pressable } from 'react-native'
-import { LewdDeck } from '../../../assets/decks/lewdDeck'
+import { useFonts } from 'expo-font';
 
 import styles from './Card.style'
 
@@ -8,14 +8,15 @@ import styles from './Card.style'
 // console.log(Card(getNewCard()))
 
 const Card = ({ selecteddeck }) => {
-  // const [type, setType] = useState(Deck[Math.floor(Math.random() * Deck.length)]['type']);
-  const [card, setCard] = useState(Deck[Math.floor(Math.random() * Deck.length)])
-  // const [challenge, setChallenge] = useState(Deck[Math.floor(Math.random() * Deck.length)]['challenge']);
-  // const [punishment, setPunishment] = useState(Deck[Math.floor(Math.random() * Deck.length)]['challenge']);
+  useFonts({
+    'Carter One': require('../../../assets/fonts/CarterOne-Regular.ttf'),
+  });
+
+  const [card, setCard] = useState(selecteddeck[Math.floor(Math.random() * selecteddeck.length)])
 
   const getNewCard = () => {
-    const newcard = Deck[Math.floor(Math.random() * Deck.length)];
-    Deck.splice(Deck.indexOf(newcard), 1);
+    const newcard = selecteddeck[Math.floor(Math.random() * selecteddeck.length)];
+    selecteddeck.splice(selecteddeck.indexOf(newcard), 1);
     setCard(newcard)
     console.log(newcard)
   }
