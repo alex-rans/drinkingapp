@@ -1,31 +1,8 @@
 import { GetRandonInt, GetRandomDirection, GetRandomName, GetTypes } from '../deckFunctions'
 
 export function LewdDeck(names = ['cunt', 'fag']) {
-  // function GetRandonInt(min, max) {
-  //   const number = Math.floor(Math.random() * (max - min + 1) + min);
-  //   return number;
-  // }
+  const types = GetTypes();
 
-  // function GetRandomDirection() {
-  //   const randomBoolean = () => Math.random() >= 0.5;
-  //   if (randomBoolean()) {
-  //     return 'left'
-  //   }
-  //   else return 'right'
-  // }
-  // function GetRandomName(names) {
-  //   const shuffled = names.sort(() => 0.5 - Math.random());
-  //   let selected = shuffled.slice(0, 2);
-  //   return selected
-  // }
-  // const types = {
-  //   DARE: 'Dare',
-  //   GAME: 'Game',
-  //   NORMAL: 'Normal'
-  // }
-  const types = GetTypes()
-
-  // names = JSON.parse(names)
   const deck = {
     name: "Lewd",
     cards: [
@@ -36,7 +13,7 @@ export function LewdDeck(names = ['cunt', 'fag']) {
       },
       {
         type: types.DARE,
-        challenge: `${GetRandomName(names)[0]} has to get slapped by ${GetRandomName(names)[2]}`,
+        challenge: `${GetRandomName(names)[0]} has to get slapped by ${GetRandomName(names)[1]}`,
         punishment: `Take ${GetRandonInt(1, 2)} sips`
       },
       {
@@ -98,7 +75,7 @@ export function LewdDeck(names = ['cunt', 'fag']) {
       },
       {
         type: types.NORMAL,
-        challenge: `${GetRandomName(names)[0]} drink as many sips as you want. ${GetRandomName(names)[0]} has to drink double`,
+        challenge: `${GetRandomName(names)[0]} drink as many sips as you want. ${GetRandomName(names)[1]} has to drink double`,
       },
       {
         type: types.NORMAL,
@@ -127,7 +104,7 @@ export function LewdDeck(names = ['cunt', 'fag']) {
       },
       {
         type: types.NORMAL,
-        challenge: `If you've had sex more than 4 times in one day, give out 3 sips. If not, drink them`,
+        challenge: `${GetRandomName(names)[0]}, if you've had sex more than 4 times in one day, give out 3 sips. If not, drink them`,
       },
       {
         type: types.GAME,
@@ -264,16 +241,20 @@ export function LewdDeck(names = ['cunt', 'fag']) {
         challenge: `Spin the bottle. Take turns to spin the bottle and kiss the player it lands on, Anyone who refuses has to take 2 sips. ${GetRandomName(names)[0]}, you start`,
       },
       {
+        type: types.GAME,
+        challenge: `Everyone vote on who has the worst sex life. The unfortunate person has to drink ${GetRandonInt(2, 4)} sips`,
+      },
+      {
         type: types.NORMAL,
         challenge: `The person who last filled their glass has to drink a sip.`,
       },
       {
         type: types.NORMAL,
-        challenge: `${GetRandomName(names)[0]} and ${GetRandomName(names)[2]}, cross arms and take a sip together.`,
+        challenge: `${GetRandomName(names)[0]} and ${GetRandomName(names)[1]}, hook arms and take a sip together.`,
       },
       {
         type: types.NORMAL,
-        challenge: `${GetRandomName(names)[0]}, give out one sip for every good quality that ${GetRandomName(names)[2]} has`,
+        challenge: `${GetRandomName(names)[0]}, give out one sip for every good quality that ${GetRandomName(names)[1]} has`,
       },
       {
         type: types.NORMAL,
@@ -281,7 +262,7 @@ export function LewdDeck(names = ['cunt', 'fag']) {
       },
       {
         type: types.NORMAL,
-        challenge: `Whoever has the biggest hands out of ${GetRandomName(names)[0]} and ${GetRandomName(names)[0]}, drink a sip.`,
+        challenge: `Whoever has the biggest hands out of ${GetRandomName(names)[0]} and ${GetRandomName(names)[1]}, drink a sip.`,
       },
       {
         type: types.NORMAL,
@@ -294,15 +275,15 @@ export function LewdDeck(names = ['cunt', 'fag']) {
       },
       {
         type: types.NORMAL,
-        challenge: `${GetRandomName(names)[0]}, choose someone to take a sip from ${GetRandomName(names)[0]}'s glass`,
+        challenge: `${GetRandomName(names)[0]}, choose someone to take a sip from ${GetRandomName(names)[1]}'s glass`,
       },
       {
         type: types.NORMAL,
-        challenge: `${GetRandomName(names)[0]}, drink a sip from ${GetRandomName(names)[0]}'s glass`,
+        challenge: `${GetRandomName(names)[0]}, drink a sip from ${GetRandomName(names)[1]}'s glass`,
       },
       {
         type: types.NORMAL,
-        challenge: `Give out 2 sips if you'eve ever masturbated at work.`,
+        challenge: `Give out 2 sips if you've ever masturbated at work.`,
       },
       {
         type: types.NORMAL,
@@ -423,16 +404,12 @@ export function LewdDeck(names = ['cunt', 'fag']) {
         challenge: `Everyone vote on which player gets laid the least. The player with the most votes has to drink ${GetRandonInt(3, 4)} sips`,
       },
       {
-        type: types.GAME,
-        challenge: `Everyone vote on which player gets laid the least. The player with the most votes can give out ${GetRandonInt(3, 4)} sips`,
-      },
-      {
         type: types.NORMAL,
         challenge: `${GetRandomName(names)[0]}, give out 2 sips to the most attractive player`,
       },
       {
         type: types.NORMAL,
-        challenge: `If you'eve ever slept with someone and forgotten/never knew their name, drink ${GetRandonInt(2, 3)} sips`,
+        challenge: `If you've ever slept with someone and forgotten/never knew their name, drink ${GetRandonInt(2, 3)} sips`,
       },
       {
         type: types.NORMAL,
@@ -444,7 +421,7 @@ export function LewdDeck(names = ['cunt', 'fag']) {
       },
       {
         type: types.NORMAL,
-        challenge: `${GetRandomName(names)[0]}, if you'eve ever beaten somebody up, give out 2 sips`,
+        challenge: `${GetRandomName(names)[0]}, if you've ever beaten somebody up, give out 2 sips`,
       },
       {
         type: types.NORMAL,
@@ -571,7 +548,7 @@ export function LewdDeck(names = ['cunt', 'fag']) {
       },
       {
         type: types.NORMAL,
-        challenge: `If you've ever send nudes to someone, drink ${GetRandonInt(2, 4)}`,
+        challenge: `If you've ever send nudes to someone, drink ${GetRandonInt(2, 4)} sips`,
       },
       {
         type: types.GAME,
@@ -590,10 +567,260 @@ export function LewdDeck(names = ['cunt', 'fag']) {
         challenge: `Players who have been arrested take a sip`,
       },
       {
-        type: types.GAME,
+        type: types.DARE,
         challenge: `${GetRandomName(names)[0]}, pass a snack from your mouth to another player's mouth`,
         punishment: `Take ${GetRandonInt(2, 4)} sips if either of you refuse`
       },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)[0]}, if you're older than ${GetRandomName(names)[1]} drink a sip`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)[0]}, if you're younger than ${GetRandomName(names)[1]} drink a sip`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)[0]}, give ${GetRandonInt(2, 3)} sips to the player you know the most`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)[0]}, give ${GetRandonInt(2, 3)} sips to the player you know the least`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(2, 3)} sips if you've ever been deepthroat`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(2, 3)} sips if you've ever deepthroated someone`,
+      },
+      {
+        type: types.GAME,
+        challenge: `Everyone vote on who is the best throatgoat. The player with the most votes can give out ${GetRandonInt(2, 4)} sips`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink 2 sips if you've ever sexted someone`,
+      },
+      {
+        type: types.GAME,
+        challenge: `Everyone vote on who you think has had the most sexual partner. The player with the most votes has to drink ${GetRandonInt(2, 4)} sips`,
+      },
+      {
+        type: types.GAME,
+        challenge: `Brands of vodka. If you repeat or can't think of one, drink 2 sips. ${GetRandomName(names)[0]}, you start`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `If you think ${GetRandomName(names)[0]} would be a good fuck, drink 2 sips`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `If you've ever had a purely fuck buddy relationship with a friend, drink ${GetRandonInt(1, 2)} sips`,
+      },
+      {
+        type: types.GAME,
+        challenge: `Things you can put up your ass. If you repeat or can't think of one, drink 2 sips. ${GetRandomName(names)[0]}, you start`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)[0]}, hook your arm under you leg and drink 2 sips`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `The first person to post a selfie on social media can give out a shot. The picture must stay up until tomorrow`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)[0]}, either you give one sip to whoever you want, or ${GetRandomName(names)[1]} has to drink 2 sips`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `If you're single, give 2 sips to another person`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `If you're in a relationship, give 2 sips to another person`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `If you're single, drink 2 sips`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `If you're in a relationship, drink 2 sips`,
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)[0]}, choose a player and ask them a question. They have to answer honestly`,
+        punishment: `If they refuse to answer they have to drink a shot`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(1, 2)} sips if you have to go to work tomorrow (Then cry is silence)`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(1, 2)} sips if you've ever slept with a classmate`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(1, 2)} sips if you've ever slept with a colleague`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(1, 2)} sips if you've ever slept with your friend`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(2, 3)} sips if you've ever slept with your best friend`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(1, 2)} sips you've ever had a sore ass after anal`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)[0]}, if you've ever fantasized about ${GetRandomName(names)[1]}, give out ${GetRandonInt(1, 3)} sips. If not, drink them.`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Players who are bald have to drink a shot`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `If you've ever hooked up thanks to a dating up, drink ${GetRandonInt(2, 4)} sips.`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Players who have Tinder on their phone, drink ${GetRandonInt(2, 4)} sips.`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Players who have multiple dating apps on their phone, drink ${GetRandonInt(2, 5)} sips.`,
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)[0]}, choose a player to drink a bodyshot from`,
+        punishment: `If either of you refuse, drink a shot each`
+      },
+      {
+        type: types.GAME,
+        challenge: `${GetRandomName(names)[0]}, point out the 3 hottest people in the room. The hottest has to drink 1 sip. The second hottest 2 sips and the third hottest 3 sips.`,
+      },
+      {
+        type: types.GAME,
+        challenge: `Objects used for bondage. If you repeat or can't think of one, drink 2 sips. ${GetRandomName(names)[0]}, you start`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Tops drink a sip`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Bottoms drink a sip`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)[0]}, drink a sip for every time you've been dumped`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)[0]}, drink a sip for every person you've broken up with`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink 2 sips if you like chicken nuggets or if you want to be dominated by a big titty goth mommy`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Players who are currently drink Cara, drink ${GetRandonInt(2, 4)} sips`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Players who would sleep with ${GetRandomName(names)[0]}, drink ${GetRandonInt(1, 2)} sips`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Players currently have porn tabs open in their phone, drink ${GetRandonInt(1, 2)} sips`,
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)[0]}, show us the 5 most recent images on your phone`,
+        punishment: `Drink ${GetRandonInt(3, 5)} sips`
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)[0]}, show us your browser history`,
+        punishment: `Drink ${GetRandonInt(1, 4)} sips`
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)[0]}, give the person to your ${GetRandomDirection()} a lap dance`,
+        punishment: `Drink ${GetRandonInt(1, 4)} sips if you refuse`
+      },
+      {
+        type: types.GAME,
+        challenge: `${GetRandomName(names)[0]} and ${GetRandomName(names)[1]}, tell us your best pick up line. All other players vote on who is the best one. The winner can give out ${GetRandonInt(2, 4)} sips`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(1, 2)} sips if you've ever had sex on the first date (hookups don't count)`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(1, 2)} sips if you ever took someone home after a party`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(2, 3)} sips if you ever send a naughty text to the wrong person`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(2, 3)} sips if you are currently obsessing over someone`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `People in a situanship drink ${GetRandonInt(2, 3)} sips.`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink 2 sips if you've ever did dirty things in a movie theatre`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(2, 4)} sips if you've ever been caught in the act`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(2, 3)} sips if you've ever caught someone in the act`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(2, 3)} sips if you've ever caught someone in the act`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(2, 4)} sips if you've every fucked your (step) sister/brother`,
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)[0]}, swap an item of clother with ${GetRandomName(names)[1]}`,
+        punishment: `Drink ${GetRandonInt(1, 4)} sips if either of you refuse`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `The player who most recently watched porn can give out ${GetRandonInt(1, 4)} sips`,
+      },
+      {
+        type: types.GAME,
+        challenge: `${GetRandomName(names)[0]}, Say something you've never done. All players who have done it drink ${GetRandonInt(2, 3)} sips`,
+    },
+    {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)[0]}, give out 1 sip for every other player`,
+    },
     ]
   }
   return deck;

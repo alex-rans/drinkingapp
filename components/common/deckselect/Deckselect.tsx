@@ -5,6 +5,7 @@ import styles from './Deckselect.style'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Deckselect = (deck) => {
+    deck = deck['deck']
     const storeData = async (value) => {
         try {
             await AsyncStorage.setItem('deck', value);
@@ -22,13 +23,24 @@ const Deckselect = (deck) => {
     // const width = Dimensions.get('window').width * 0.8;
 
     return (
+        // <Link style={styles.deckContainer} href={{ pathname: '/playerselect' }} onPress={() => {
+        //     storeData(deck['name'])
+        // }}>
+        //     <Text style={styles.deckTitle}>
+        //         <Image style={styles.deckImage} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }} />
+        //         {deck['name']}
+        //     </Text>
+        // </Link>
+
         <Link style={styles.deckContainer} href={{ pathname: '/playerselect' }} onPress={() => {
             storeData(deck['name'])
         }}>
-            <Text style={styles.deckText}>
-                <Image style={styles.deckImage} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }} />
-                {deck['name']}
-            </Text>
+            {/* <Image style={styles.deckImage} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }} /> */}
+            <View>
+                <Text style={styles.deckTitle}>{deck['name']}</Text>
+                <Text style={styles.deckText}>{deck['description']}</Text>
+            </View>
+
         </Link>
     )
 }

@@ -3,29 +3,33 @@ import { View, Text, Pressable } from 'react-native'
 import { useFonts } from 'expo-font';
 
 import styles from './Card.style'
+import { Link } from 'expo-router';
 
 
-// console.log(Card(getNewCard()))
 
 const Card = ({ selecteddeck }) => {
+  
   useFonts({
     'Carter One': require('../../../assets/fonts/CarterOne-Regular.ttf'),
   });
-
   const [card, setCard] = useState(selecteddeck[Math.floor(Math.random() * selecteddeck.length)])
 
   const getNewCard = () => {
     const newcard = selecteddeck[Math.floor(Math.random() * selecteddeck.length)];
     selecteddeck.splice(selecteddeck.indexOf(newcard), 1);
     setCard(newcard)
-    console.log(newcard)
+    console.log(card)
+    console.log(selecteddeck.length)
   }
 
   if (card['type'] === 'Dare') {
     return (
       <Pressable style={styles.cardDare} onPress={() => {
-        if (Deck.length == 1) {
-          console.log('asshat')
+        if (selecteddeck.length == 1) {
+          setCard({
+            "type": "Over",
+            "challenge": "Game over"
+          })
         }
         else {
           getNewCard();
@@ -41,8 +45,11 @@ const Card = ({ selecteddeck }) => {
   else if (card['type'] === 'Game') {
     return (
       <Pressable style={styles.cardGame} onPress={() => {
-        if (Deck.length == 1) {
-          console.log('asshat')
+        if (selecteddeck.length == 1) {
+          setCard({
+            "type": "Over",
+            "challenge": "Game over"
+          })
         }
         else {
           getNewCard();
@@ -56,8 +63,11 @@ const Card = ({ selecteddeck }) => {
   else if (card['type'] === 'Normal') {
     return (
       <Pressable style={styles.cardNormal} onPress={() => {
-        if (Deck.length == 1) {
-          console.log('asshat')
+        if (selecteddeck.length == 1) {
+          setCard({
+            "type": "Over",
+            "challenge": "Game over"
+          })
         }
         else {
           getNewCard();
@@ -65,6 +75,16 @@ const Card = ({ selecteddeck }) => {
       }}>
         <Text style={styles.cardText}>{card['challenge']}</Text>
       </Pressable>
+    )
+  }
+  else if (card['type'] === 'Over') {
+    return (
+      // <View style={styles.cardNormal}>
+      <Link style={styles.cardNormal} href={{ pathname: "/" }}>
+        <Text style={styles.cardTitle}>{card['challenge']}</Text>
+      </Link>
+      // </View>
+
     )
   }
 }

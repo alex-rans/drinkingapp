@@ -1,7 +1,4 @@
 import { StyleSheet } from "react-native";
-import { useFonts } from 'expo-font';
-
-
 
 const styles = StyleSheet.create({
   container: {
@@ -37,6 +34,7 @@ const styles = StyleSheet.create({
     alignItems: `center`,
     marginVertical: `15px`,
     marginHorizontal: `30px`,
+    maxWidth: '90%',
     fontSize: 28,
     textAlign: `center`,
   },
@@ -47,7 +45,8 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   cardTitle: {
-    fontFamily: 'Carter One, sans-serif',
+    fontFamily: 'Carter One',
+    // fontWeight: 'bold',
     fontSize: 58,
     color: 'white',
   }

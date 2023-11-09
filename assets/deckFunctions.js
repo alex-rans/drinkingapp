@@ -10,7 +10,7 @@ function GetRandomDirection() {
     }
     else return 'right'
 }
-function GetRandomName(names) {
+function GetRandomName(names = ['player 01', 'player 02']) {
     const shuffled = names.sort(() => 0.5 - Math.random());
         let selected = shuffled.slice(0, 2);
         return selected

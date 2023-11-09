@@ -1,21 +1,22 @@
 {
   "expo": {
     "scheme": "acme",
+    "icon": "./assets/icon.png",
     "web": {
       "bundler": "metro"
     },
     "plugins": [
       "expo-router"
     ],
-    "name": "Alex's wacky and silly drinking game",
-    "slug": "get_drunk",
+    "name": "Shots Fired",
+    "slug": "shotsfired",
     "privacy": "public",
     "platforms": [
       "android",
       "web"
     ],
     "android": {
-      "package": "com.alex.drinking",
+      "package": "com.alex.shotsfired",
       "versionCode": 1
     },
     "version": "1.0.0",
@@ -25,7 +26,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "3001223e-bf6a-4131-a3b5-8b61368720ca"
+        "projectId": "747be8ad-a01b-4192-b887-eb545048ddc5"
       }
     }
   }

@@ -31,6 +31,7 @@ const Playerselect = () => {
 
   const submitName = () => {
     setPlayers(players => [...players, playerinput])
+    setPlayInput('')
   }
 
   const playerlabels = players.map((player) => 
