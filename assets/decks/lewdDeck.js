@@ -816,11 +816,109 @@ export function LewdDeck(names = ['cunt', 'fag']) {
       {
         type: types.GAME,
         challenge: `${GetRandomName(names)[0]}, Say something you've never done. All players who have done it drink ${GetRandonInt(2, 3)} sips`,
-    },
-    {
+      },
+      {
         type: types.NORMAL,
         challenge: `${GetRandomName(names)[0]}, give out 1 sip for every other player`,
-    },
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink a sip for every line you snorted today`,
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)[0]}, text the last person you texted that you're pregnant`,
+        punishment: `Drink ${GetRandonInt(1, 4)} sips if you refuse`
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)[0]}, show the group the last porn you watched`,
+        punishment: `Drink ${GetRandonInt(2, 5)} sips if you refuse`
+      },
+      {
+        type: types.GAME,
+        challenge: `${GetRandomName(names)[0]}, fuck, marry, kill 3 people in the group. The married person can give out 1 sip and the dead person has to drink 1 sip`,
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)[0]}, tell the group about the hottest sex you've had`,
+        punishment: `Drink ${GetRandonInt(3, 6)} sips if you refuse`
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)}, chug you drink. If you can chug it in 5 seconds you can give out a shot`,
+        punishment: `If you refuse, drink ${GetRandonInt(5, 8)} sips`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)}, share a guilty pleasure. Anyone who shares that pleasure takes a sip`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)}, share a fun fact about yourself. Anyone who didn't know this fact drinks a sip`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `The person hosting the function can give out ${GetRandonInt(2, 4)} sips`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Everyone with their socks off, drink a sip`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Everyone wearing skirts takes a sip.`
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)}, give your phone, unlocked, to ${GetRandomName(names)} for 1 minute`,
+        punishment: `drink a shot if you refuse`
+      },
+      {
+        type: types.GAME,
+        challenge: `Synonyms for sex. If you repeat or can't think of one, drink 2 sips. ${GetRandomName(names)}, you start`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `All players who are going out tonight, drink a shot`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(1, 2)} sips if your Alex' incredibly hot girlfriend`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `The person who arrived last to the party has to drink a shot`
+      },
+      {
+        type: types.NORMAL,
+        challenge: 'The last player that smoked weed has to drink a sip'
+      },
+      {
+        type: types.GAME,
+        challenge: `Places to hide a dead body. If you repeat or can't think of one, take ${GetRandonInt(1, 3)} sips. ${GetRandomName(names)} starts`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(1, 2)} sips if you've ever thrown up before arriving to a party`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink a sip if you've ever had unprotected sex with a stranger`
+      },
+      {
+        type: types.GAME,
+        challenge: `Dating apps. If you repeat or can't think of one, drink 2 sips. ${GetRandomName(names)}, you start`,
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)}, give access to your snap to ${GetRandomName(names)} for 1 minute`,
+        punishment: `drink a shot if you refuse`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)}, give out ${GetRandonInt(2, 4)} sips for every player who is more attractive than you. If you think there are none, they're all yours.`,
+      },
     ]
   }
   return deck;

@@ -1,3 +1,5 @@
+let lastname = ''
+
 function GetRandonInt(min, max) {
     const number = Math.floor(Math.random() * (max - min + 1) + min);
     return number;
@@ -12,8 +14,11 @@ function GetRandomDirection() {
 }
 function GetRandomName(names = ['player 01', 'player 02']) {
     const shuffled = names.sort(() => 0.5 - Math.random());
-        let selected = shuffled.slice(0, 2);
-        return selected
+    if(shuffled[0] == lastname) {
+        GetRandomName(names)
+    }
+    lastname = shuffled[0]
+    return shuffled[0]
 }
 
 function GetTypes() {
@@ -24,4 +29,4 @@ function GetTypes() {
     }
 }
 
-export {GetRandonInt, GetRandomDirection, GetRandomName, GetTypes}
+export { GetRandonInt, GetRandomDirection, GetRandomName, GetTypes }

@@ -26,22 +26,6 @@ const Game = () => {
             setPlayers(JSON.parse(value))
             setIsLoading(false)            
         });
-
-        // switch (deck) {
-        //     case 'Normal':
-        //         Deck = NormalDeck(players)['cards']
-        //         Pick50Cards(Deck);
-        //         break;
-        //     case 'Lewd':
-        //         Deck = LewdDeck(players)['cards']
-        //         Pick50Cards(Deck);
-        //         break;
-        //     case 'Test':
-        //         gameDeck = TestDeck(players)['cards']
-        //         // Pick50Cards(Deck);
-        //         break;
-        // }
-        // setIsLoading(false)
     }, [])
 
     function Pick50Cards(deck) {
@@ -53,6 +37,7 @@ const Game = () => {
         }
     }
 
+    
     switch (deck) {
         case 'Normal':
             Deck = NormalDeck(players)['cards']
