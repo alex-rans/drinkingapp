@@ -540,52 +540,138 @@ export function NormalDeck(names = ['das', 'dsak']) {
             {
                 type: types.NORMAL,
                 challenge: `Girls, drink as many sips as there are handsome guys in the room`,
-              },
-              {
+            },
+            {
                 type: types.NORMAL,
                 challenge: `Girls, drink as many sips as there are attractive girls in the room`,
-              },
-              {
+            },
+            {
                 type: types.NORMAL,
                 challenge: `Guys, drink as many sips as there are attractive girls in the room`,
-              },
-              {
+            },
+            {
                 type: types.NORMAL,
                 challenge: `Guys, drink as many sips as there are handsome guys in the room`,
-              },
-              {
+            },
+            {
                 type: types.NORMAL,
                 challenge: `The first player out of ${GetRandomName(names)} and ${GetRandomName(names)} to touch the fridge, give out ${GetRandonInt(2, 4)} sips`,
-              },
-              {
+            },
+            {
                 type: types.NORMAL,
                 challenge: `${GetRandomName(names)}, give out ${GetRandonInt(2, 4)} sips for every player who is more attractive than you. If you think there are none, they're all yours.`,
-              },
-              {
+            },
+            {
                 type: types.GAME,
                 challenge: `Russian roulette! Make 5 shots of water and 1 shot of vodka and shuffle. ${GetRandomName(names)} has to drink the first one. Go clockwise`,
-              },
-              {
+            },
+            {
                 type: types.NORMAL,
                 challenge: `Drink a sip if you watch TLC just to laugh at people`,
-              },
-              {
+            },
+            {
                 type: types.NORMAL,
                 challenge: `No more cigarettes for the rest of the game. Drink a shot if you want to smoke`,
-              },
-              {
+            },
+            {
                 type: types.NORMAL,
                 challenge: `Drink a sip if you haven't been to the dentist this year`,
-              },
-              {
+            },
+            {
                 type: types.NORMAL,
                 challenge: `Drink ${GetRandonInt(1, 3)} sip if you've ever driven faster than 150 km/h`,
-              },
-              {
+            },
+            {
                 type: types.NORMAL,
                 challenge: `${GetRandomName(names)}, drink a sip for every empty glass on the tables`,
-              },
-              
+            },
+            {
+                type: types.GAME,
+                challenge: `Busdriver! ${GetRandomName(names)} has to get on the bus and can get out when they finish the game`,
+            },
+            {
+                type: types.GAME,
+                challenge: `Two truths and a lie! ${GetRandomName(names)} has to say 2 truths and a lie. Everyone takes turns guessing the lie. When everyone has taken a guess they can reveal which one was the lie. People who lose have to drink ${GetRandonInt(2, 4)} sips`,
+            },
+            {
+                type: types.GAME,
+                challenge: `Thumb wars! ${GetRandomName(names)} and ${GetRandomName(names)} have to do a thumb wars. The loser has to drink ${GetRandonInt(2, 4)} sips. Players can bet on the winner. If they lose the bet they have to drink a sip. If they win, they can give out a sip`,
+            },
+            {
+                type: types.GAME,
+                challenge: `Arm wrestle! ${GetRandomName(names)} and ${GetRandomName(names)} have to arm wrestle. The loser has to drink ${GetRandonInt(2, 4)} sips. Players can bet on the winner. If they lose the bet they have to drink a sip. If they win, they can give out a sip`,
+            },
+            {
+                type: types.NORMAL,
+                challenge: `${GetRandomName(names)}, drink a sip for every empty glass on the tables`,
+            },
+            {
+                type: types.JOKER,
+                challenge: `Raise your pinky finger every time you drink until the end of the game or until the next joker card`,
+            },
+            {
+                type: types.JOKER,
+                challenge: `Say amen every time you drink until the end of the game or until the next joker card`,
+            },
+            {
+                type: types.JOKER,
+                challenge: `Say a slur every time you drink until the end of the game or until the next joker card`,
+            },
+            {
+                type: types.JOKER,
+                challenge: `Touch your nose every time you drink until the end of the game or until the next joker card`,
+            },
+            {
+                type: types.JOKER,
+                challenge: `High five the person to your left every time you drink until the end of the game or until the next joker card`,
+            },
+            {
+                type: types.JOKER,
+                challenge: `Moan every time you drink until the end of the game or until the next joker card`,
+            },
+            {
+                type: types.JOKER,
+                challenge: `look in the eyes of the person across from you every time you drink until the end of the game or until the next joker card`,
+            },
+            {
+                type: types.JOKER,
+                challenge: `Raise your glass and say 'Shalom' every time you drink until the end of the game or until the next joker card`,
+            },
+            {
+                type: types.GAME,
+                challenge: `Rhyme! ${GetRandomName(names)} has to pick a rhyme and everyone has to take turns saying a work that rhymes with it. If you repeat or can't think of one, drink ${GetRandonInt(2, 3)} sips`,
+            },
+            {
+                type: types.DARE,
+                challenge: `${GetRandomName(names)} has to give their phone to ${GetRandomName(names)}. They can compose a text to whoever they want and have to give it back to the owner without hitting send`,
+                punishment: `Drink ${GetRandonInt(4, 8)} sips if you don't hit send`
+            },
+            {
+                type: types.JOKER,
+                challenge: `${GetRandomName(names)}, pick a mate! Every time you drink, they have to drink too until the end of the game or until the next joker card`,
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Drink a sip if you've every kissed a person of the same sex on the mouth`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `People with an ${GetRandomName(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])} in their name, drink a shot`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `${GetRandomName(names)}, drink a sip if you've ever been to a party with ${GetRandomName(names)}`
+            },
+            {
+                type: types.GAME,
+                challenge: `Drinking games. If you repeat or can't think of one, take ${GetRandonInt(1, 2)} sips. ${GetRandomName(names)} starts`,
+            },
+            {
+                type: types.GAME,
+                challenge: `${GetRandomName(names)}, impersonate another player. The first person to guess correctly has to give out 2 sips`,
+            },
+
+
 
         ]
     }

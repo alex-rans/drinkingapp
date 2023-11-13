@@ -57,6 +57,24 @@ const Card = ({ selecteddeck }) => {
       </Pressable>
     )
   }
+  else if (card['type'] === 'Joker') {
+    return (
+      <Pressable style={styles.cardJoker} onPress={() => {
+        if (selecteddeck.length == 1) {
+          setCard({
+            "type": "Over",
+            "challenge": "Game over"
+          })
+        }
+        else {
+          getNewCard();
+        }
+      }}>
+        <Text style={styles.cardTitle}>Joker!</Text>
+        <Text style={styles.cardText}>{card['challenge']}</Text>
+      </Pressable>
+    )
+  }
   else if (card['type'] === 'Normal') {
     return (
       <Pressable style={styles.cardNormal} onPress={() => {
@@ -78,7 +96,6 @@ const Card = ({ selecteddeck }) => {
   }
   else if (card['type'] === 'Over') {
     return (
-
       <Link style={styles.cardNormal} href={{ pathname: "/" }}>
         <Text style={styles.cardTitle}>{card['challenge']}</Text>
       </Link>

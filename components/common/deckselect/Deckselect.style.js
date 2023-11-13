@@ -2,12 +2,9 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   deckContainer: {
-    // display: 'flex',
-    // flexDirection: 'row',
-    // alignItems: 'center',
-    borderColor: '#171717',
-    borderRadius: 10,
+    borderColor: 'white',
     borderWidth: 1,
+    borderRadius: 10,
     padding: 10,
     width: '80%',
     marginBottom: 15
@@ -18,16 +15,12 @@ const styles = StyleSheet.create({
     height: 25
   },
   deckTitle: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'flex-start',
     fontSize: 24,
     color: 'white',
+    fontFamily: 'Carter One',
   },
   deckText: {
     color: 'white',
-    maxWidth: '100%',
-    overflow: 'hidden'
   }
 });
 

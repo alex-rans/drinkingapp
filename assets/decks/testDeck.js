@@ -9,9 +9,9 @@ export function TestDeck(names) {
         name: "Test",
         cards: [
             {
-                type: types.NORMAL,
-                challenge: `${GetRandomName(names)} ${GetRandomName(names)}`,
-            },
+                type: types.JOKER,
+                challenge: `Shadow wizard money gang`,
+              },
         ]
     }
 

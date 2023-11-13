@@ -3,8 +3,14 @@ import { View, Text, Image } from 'react-native'
 import { Link } from "expo-router";
 import styles from './Deckselect.style'
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useFonts } from 'expo-font';
+
 
 const Deckselect = (deck) => {
+    useFonts({
+        'Carter One': require('../../../assets/fonts/CarterOne-Regular.ttf'),
+      });
     deck = deck['deck']
     const storeData = async (value) => {
         try {
@@ -14,33 +20,14 @@ const Deckselect = (deck) => {
         }
     };
 
-    // const data = ['Normal', 'Lewd', 'Spicy']
-    // const dataList = data.map((deck) => 
-    //   <View>
-    //       <Text>{deck}</Text>
-    //   </View>
-    // );
-    // const width = Dimensions.get('window').width * 0.8;
-
     return (
-        // <Link style={styles.deckContainer} href={{ pathname: '/playerselect' }} onPress={() => {
-        //     storeData(deck['name'])
-        // }}>
-        //     <Text style={styles.deckTitle}>
-        //         <Image style={styles.deckImage} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }} />
-        //         {deck['name']}
-        //     </Text>
-        // </Link>
 
         <Link style={styles.deckContainer} href={{ pathname: '/playerselect' }} onPress={() => {
             storeData(deck['name'])
         }}>
-            {/* <Image style={styles.deckImage} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }} /> */}
-            <View>
-                <Text style={styles.deckTitle}>{deck['name']}</Text>
+            
+                <Text style={styles.deckTitle}>{deck['name']}{"\n"}</Text>
                 <Text style={styles.deckText}>{deck['description']}</Text>
-            </View>
-
         </Link>
     )
 }

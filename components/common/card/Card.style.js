@@ -29,6 +29,14 @@ const styles = StyleSheet.create({
     justifyContent: `center`,
     backgroundColor: '#008000'
   },
+  cardJoker: {
+    display: `flex`,
+    width: '100%',
+    height: '100%',
+    alignItems: `center`,
+    justifyContent: `center`,
+    backgroundColor: '#ab5dee'
+  },
   cardText: {
     color: 'white',
     alignItems: `center`,

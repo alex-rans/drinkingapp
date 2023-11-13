@@ -15,7 +15,7 @@ const Home = () => {
         {
             name: 'Lewd',
             description: 'A little bit of naughty fun you can have in group',
-            'imgurl': ''
+            imgurl: ''
         },
         {
             name: 'Spicy',

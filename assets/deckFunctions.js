@@ -25,7 +25,8 @@ function GetTypes() {
     return types = {
         DARE: 'Dare',
         GAME: 'Game',
-        NORMAL: 'Normal'
+        NORMAL: 'Normal',
+        JOKER: 'Joker'
     }
 }
 

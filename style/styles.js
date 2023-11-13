@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
   },
   namecardContainer: {
     display: 'flex',
+    flexWrap: 'wrap',
     flexDirection:'row',
     marginHorizontal: 30,
     marginBottom: 10
