@@ -10,6 +10,7 @@ const Playerselect = () => {
   const [deck, setDeck] = useState('Loading...');
   const [playerinput, setPlayInput] = useState('name')
   const [players, setPlayers] = useState([])
+  const [reload, setReload] = useState()
 
 
   useEffect(() => {
@@ -35,17 +36,20 @@ const Playerselect = () => {
   function submitName() {
     //I have no fucking clue as to why pushing to test somehow adds it to the players list
     //React is full of mysteries.
-    //It kinda works so good
+    //It kinda works so who cares
     test.push(playerinput);
     setPlayers(test)
     console.log(players)
     storeData(players)
+    setPlayInput('')
   }
 
   function removeName(player) {
     test.splice(test.indexOf(player), 1);
     setPlayers(test)
     console.log(players)
+    //this is stupid
+    setReload(Math.random() * (0 - 999999) + 999999)
   }
 
   const playerlabels = players.map((player) =>

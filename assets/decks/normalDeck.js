@@ -670,9 +670,87 @@ export function NormalDeck(names = ['das', 'dsak']) {
                 type: types.GAME,
                 challenge: `${GetRandomName(names)}, impersonate another player. The first person to guess correctly has to give out 2 sips`,
             },
-
-
-
+            {
+                type: types.NORMAL,
+                challenge: `Players with tattoos drink drink a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Players who've been on a holiday this year drink a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Players that wear glasses drink drink a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Players wearing white drink a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `The person who can do the most pushups can give out ${GetRandonInt(2, 4)} sips`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Drink a sip if you've ever gone skydiving`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Players with a fear of spiders drink a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Players who can do a handstand can give out ${GetRandonInt(2, 4)} sips`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Players who have cooked a meal today drink a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Players who have successfully ran a marathon can give out ${GetRandonInt(2, 4)} sips`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Players with a fear of height drink a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Players who have volunteered this year can give out a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Players who are wearing a watch drink a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `The player with the most recent birthday can drink ${GetRandonInt(1, 2)} sips`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Players who can toucher their toes without bending their knees can give out ${GetRandonInt(2, 4)} sips`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Introverts drink a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Extroverts drink a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Players who believe in astrology drink ${GetRandonInt(1, 2)} sips`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `The player who went to the gym most recently can give out ${GetRandonInt(2, 4)} sips`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Players who've had lice drink ${GetRandonInt(1, 2)} sips`
+            },
+            
         ]
     }
     return deck;
