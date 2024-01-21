@@ -42,6 +42,24 @@ export function LewdDeck(names = ['cunt', 'fag']) {
       },
       {
         type: types.NORMAL,
+        challenge: `${GetRandomName(names)}, Give out a sip for every piece of clothing you remove`,
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)}, pick someone who has to remove one piece of clothing`,
+        punishment: `Take ${GetRandonInt(2, 4)} sips if you refuse`
+      },
+      {
+        type: types.DARE,
+        challenge: `The person who last removed a piece of clothing has to remove another one`,
+        punishment: `Take ${GetRandonInt(2, 4)} sips if you refuse`
+      },
+      {
+        type: types.GAME,
+        challenge: `Strip poker! Play one round of poker. Lowest hand has to remove a piece of clothing. Winner can choose someone who has to remove one piece of clothing. Drink ${GetRandonInt(2, 4)} sips if you refus`,
+      },
+      {
+        type: types.NORMAL,
         challenge: `${GetRandomName(names)}, take a sip for every person you've slept with in this room`,
       },
       {
@@ -997,6 +1015,49 @@ export function LewdDeck(names = ['cunt', 'fag']) {
       {
         type: types.NORMAL,
         challenge: `${GetRandomName(names)}, drink a sip if you've ever been to a party with ${GetRandomName(names)}`
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)}, admit your kinkiest kink`,
+        punishment: `Drink ${GetRandonInt(2, 4)} sips`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Players who have fake boobs drink a sip`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink a sip for each time you've had sex this week`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)}, Drink a sip for every different person you've had sex with this month`
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)}, tell embarrassing story about yourself`,
+        punishment: `Drink ${GetRandonInt(2, 3)} sips`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)}, Drink a sip for every one night stand you've had`
+      },
+      {
+        type: types.GAME,
+        challenge: `Ass or tits. All players vote at once. Losing team had to drink ${GetRandonInt(2, 3)} sips`,
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)}, show us the last 10 photos on your phone`,
+        punishment: `Drink ${GetRandonInt(2, 3)} sips if you refuse`
+      },
+      {
+        type: types.JOKER,
+        challenge: `${GetRandomName(names)}, choose your bitch. You can transfer your penalties to them twice`
+      },
+      {
+        type: types.GAME,
+        challenge: `Girls, take a sip according to your bra size (A = 1, B = 2, etc...)`,
       },
     ]
   }

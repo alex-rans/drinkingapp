@@ -294,6 +294,10 @@ export function NormalDeck(names = ['das', 'dsak']) {
             },
             {
                 type: types.NORMAL,
+                challenge: `Players who are balding have to drink a shot`,
+            },
+            {
+                type: types.NORMAL,
                 challenge: `Players who are currently drink Cara, drink ${GetRandonInt(2, 4)} sips`,
             },
             {
@@ -496,6 +500,10 @@ export function NormalDeck(names = ['das', 'dsak']) {
             {
                 type: types.NORMAL,
                 challenge: `Drink ${GetRandonInt(1, 2)} sips if you're Alex' incredibly hot girlfriend`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Drink ${GetRandonInt(1, 2)} sips if you're Lily' incredibly hot girlfriend`
             },
             {
                 type: types.NORMAL,
@@ -748,9 +756,58 @@ export function NormalDeck(names = ['das', 'dsak']) {
             },
             {
                 type: types.NORMAL,
-                challenge: `Players who've had lice drink ${GetRandonInt(1, 2)} sips`
+                challenge: `Players who've had lice, drink ${GetRandonInt(1, 2)} sips`
             },
-            
+            {
+                type: types.NORMAL,
+                challenge: `${GetRandomName(names)}, drink a sip for every ex you have`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Players who have fake boobs drink a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `${GetRandomName(names)}, give out ${GetRandonInt(2, 3)} if you can suck your big toe`
+            },
+            {
+                type: types.DARE,
+                challenge: `${GetRandomName(names)}, tell embarrassing story about yourself`,
+                punishment: `Drink ${GetRandonInt(2, 3)} sips`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Redheads can give out a shot to a player`
+            },
+            {
+                type: types.JOKER,
+                challenge: `${GetRandomName(names)}, choose your bitch. You can transfer your penalties to them twice`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `All girls can give out a sip to one of the boys`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `All boys can give out a sip to one of the girls`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `${GetRandomName(names)}, do a split or take a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `${GetRandomName(names)}, do a handstand or take a sip`
+            },
+            {
+                type: types.DARE,
+                challenge: `${GetRandomName(names)}, post a picture on your Instagram story taken by ${GetRandomName(names)}`,
+                punishment: `Drink ${GetRandonInt(2, 3)} sips`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Drink a sip if you've ever had your bike stolen`
+            },
         ]
     }
     return deck;
