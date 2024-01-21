@@ -1,6 +1,6 @@
 import { GetRandonInt, GetRandomDirection, GetRandomName, GetTypes } from '../deckFunctions'
 
-export function NormalDeck(names = ['das', 'dsak']) {
+export function NormalDeck(names) {
     const types = GetTypes();
 
     const deck = {
@@ -808,6 +808,64 @@ export function NormalDeck(names = ['das', 'dsak']) {
                 type: types.NORMAL,
                 challenge: `Drink a sip if you've ever had your bike stolen`
             },
+            {
+                type: types.NORMAL,
+                challenge: `People with nipple piercings, drink a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `People with facial piercings, drink a sip`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `${GetRandomName(names)}, roll a dice. The number the dice lands on is the amount of sips you have to drink`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `${GetRandomName(names)}, roll a dice. If it lands on a 1, drink a shot. If it lands on a 6, give out a shot`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Alex can give out a shot because she is so cool and awesome`
+            },
+            {
+                type: types.NORMAL,
+                challenge: "Take a sip if you've ever traveled to another country."
+            },
+            {
+                type: types.NORMAL,
+                challenge: "If you've ever binge-watched a TV series in one sitting, take a sip."
+            },
+            {
+                type: types.DARE,
+                challenge: "Text your ex with a random emoji and see how they respond.",
+                punishment: `Drink ${GetRandonInt(2, 4)} sips if you refuse`
+            },
+            {
+                type: types.DARE,
+                challenge: "Pretend you're a news anchor reporting on a made-up event. The more dramatic, the better.",
+                punishment: `If you refuse or if no one laughs, drink ${GetRandonInt(2, 4)} sips`
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Drink a sip if you took drugs this evening`,
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Drink a sip if you put a powder up your nose this evening`,
+            },
+            {
+                type: types.NORMAL,
+                challenge: `Drink a sip if you have "a baggie" in your wallet right now`,
+            },
+            {
+                type: types.NORMAL,
+                challenge: "People with a birthday in the current month, tagive out a shot."
+            },
+            {
+                type: types.NORMAL,
+                challenge: "People who have a pet drink a sip"
+            }
         ]
     }
     return deck;

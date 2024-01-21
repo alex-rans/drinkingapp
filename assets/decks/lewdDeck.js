@@ -1,6 +1,6 @@
 import { GetRandonInt, GetRandomDirection, GetRandomName, GetTypes } from '../deckFunctions'
 
-export function LewdDeck(names = ['cunt', 'fag']) {
+export function LewdDeck(names) {
   const types = GetTypes();
 
   const deck = {
@@ -330,7 +330,7 @@ export function LewdDeck(names = ['cunt', 'fag']) {
       },
       {
         type: types.GAME,
-        challenge: `What was your favorite sex position? Players with the same answer have to drink ${GetRandonInt(2, 3)} sips.`,
+        challenge: `What is your favorite sex position? Players with the same answer have to drink ${GetRandonInt(2, 3)} sips.`,
       },
       {
         type: types.NORMAL,
@@ -379,6 +379,18 @@ export function LewdDeck(names = ['cunt', 'fag']) {
       {
         type: types.GAME,
         challenge: `Things you can smoke. If you repeat or can't think of one, drink 2 sips. ${GetRandomName(names)}, you start`,
+      },
+      {
+        type: types.GAME,
+        challenge: `Sex positions. If you repeat or can't think of one, drink 2 sips. ${GetRandomName(names)}, you start`,
+      },
+      {
+        type: types.GAME,
+        challenge: `Sex toys. If you repeat or can't think of one, drink 2 sips. ${GetRandomName(names)}, you start`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink ${GetRandonInt(2, 3)} sips if you've ever been in a BDSM dungeon`,
       },
       {
         type: types.NORMAL,
@@ -959,7 +971,7 @@ export function LewdDeck(names = ['cunt', 'fag']) {
       },
       {
         type: types.JOKER,
-        challenge: `High five the person to your left every time you drink until the end of the game or until the next joker card`,
+        challenge: `High five the person to your ${GetRandomDirection()} every time you drink until the end of the game or until the next joker card`,
       },
       {
         type: types.JOKER,
@@ -1059,6 +1071,59 @@ export function LewdDeck(names = ['cunt', 'fag']) {
         type: types.GAME,
         challenge: `Girls, take a sip according to your bra size (A = 1, B = 2, etc...)`,
       },
+      {
+        type: types.NORMAL,
+        challenge: `Players who've been in the middle of a spitroast, drink a sip`
+      },
+      {
+        type: types.GAME,
+        challenge: `${GetRandomName(names)}, guess the penis size of the first guy to your ${GetRandomDirection()}. Drink a sip for every 2 centimeters you're off.`,
+      },
+      {
+        type: types.GAME,
+        challenge: `${GetRandomName(names)}, guess the cup size of the first girl to your ${GetRandomDirection()}. Drink a sip for every size you're off.`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Players who've had sex with a transgender, drink a sip`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Guys who have been pegged, drink a sip`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Alex can give out a shot because she is so cool and awesome`
+      },
+      {
+        type: types.DARE,
+        challenge: `${GetRandomName(names)}, describe the most extreme sexual act you've performed`,
+        punishment: `Drink ${GetRandonInt(2, 4)} sips if you refuse`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Players who are horny, drink a sip`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Players who've had their face glazed with cum, drink a sip`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `${GetRandomName(names)}, drink a sip for every sex toy you own`
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink a sip if you took drugs this evening`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink a sip if you put a powder up your nose this evening`,
+      },
+      {
+        type: types.NORMAL,
+        challenge: `Drink a sip if you have "a baggie" in your wallet right now`,
+      }
     ]
   }
   return deck;

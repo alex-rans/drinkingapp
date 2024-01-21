@@ -79,14 +79,12 @@ const Card = ({ selecteddeck }) => {
     return (
       <Pressable style={styles.cardNormal} onPress={() => {
         if (selecteddeck.length == 1) {
-          console.log('ngoer')
           setCard({
             "type": "Over",
             "challenge": "Game over"
           })
         }
         else {
-          console.log('ngoer')
           getNewCard();
         }
       }}>
